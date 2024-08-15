@@ -6,7 +6,7 @@ const History = () => {
   const [historyData, setHistoryData] = useState([]);
 
   useEffect(() => {
-    fetch('http://wordle.litriggy.com/history')
+    fetch('https://wordle.litriggy.com/history')
       .then(res => res.json())
       .then(data => {
         // Sort the data by date in descending order (most recent first)
