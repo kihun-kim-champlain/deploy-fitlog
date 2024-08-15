@@ -21,7 +21,7 @@ const Home = ({ userData, sessData }) => {
   const formattedDateNow = `${year}-${month}-${day}`;
 
   useEffect(() => {
-    fetch('http://localhost:8081/history')
+    fetch('http://wordle.litriggy.com/history')
       .then(res => res.json())
       .then(data => {
         console.log('Fetched history data:', data); // Debugging line
@@ -35,7 +35,7 @@ const Home = ({ userData, sessData }) => {
   const [recoData, setRecoData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8081/recommend')
+    fetch('http://wordle.litriggy.com/recommend')
       .then(res => res.json())
       .then(data => setRecoData(data))
       .catch((error) => {
@@ -54,7 +54,7 @@ const Home = ({ userData, sessData }) => {
   const handleRecordSession = () => {
     console.log('Session Input:', selectedExercise, selectedTime, formattedDateNow);
 
-    fetch('http://localhost:8081/record-session', {
+    fetch('http://wordle.litriggy.com/record-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ const Home = ({ userData, sessData }) => {
       })
       .then(data => {
         console.log('Success:', data);
-        fetch('http://localhost:8081/history')
+        fetch('http://wordle.litriggy.com/history')
           .then(res => res.json())
           .then(data => setHistoryData(data))
           .catch((error) => {

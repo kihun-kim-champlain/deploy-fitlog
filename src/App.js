@@ -16,7 +16,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:8081/user')
+    fetch('http://wordle.litriggy.com/user')
     .then(res => res.json())
     .then(data => setUserData(data))
     .catch((error) => {
@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:8081/session')
+    fetch('http://wordle.litriggy.com/session')
     .then(res => res.json())
     .then(data => setSessData(data))
     .catch((error) => {
@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:8081/goal')
+    fetch('http://wordle.litriggy.com/goal')
     .then(res => res.json())
     .then(data => SetGoalData(data))
     .catch((error) => {

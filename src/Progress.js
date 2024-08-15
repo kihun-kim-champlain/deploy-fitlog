@@ -6,7 +6,7 @@ const Progress = () => {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8081/workout-summary')
+    fetch('http://wordle.litriggy.com/workout-summary')
       .then(res => res.json())
       .then(data => {
         // Create a map to store weekly totals by week start date
