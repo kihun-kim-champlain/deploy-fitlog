@@ -1,0 +1,26 @@
+.flex-container-history {
+  display: flex;
+  flex-direction: row; /* Change to row to place items side by side */
+  gap: 10px; /* Add some gap between flex items */
+  height: calc(100vh - 60px);
+  padding: 20px;
+  background-color: #83C9E7;
+}
+
+.history-column {
+  flex: 1;
+  background-color: #A8D9EE;
+  padding: 20px;
+  text-align: left;
+  border-radius: 15px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.history-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-column li {
+  margin-bottom: 10px;
+}

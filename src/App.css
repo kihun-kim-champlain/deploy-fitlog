@@ -1,0 +1,60 @@
+/* src/App.css */
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #81C8E7;
+}
+
+.App {
+  text-align: center;
+}
+
+nav {
+  background-color: #3FACD9;
+  height: 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Ensure no margin for ul */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  height: 100%;
+}
+
+nav ul li a:hover {
+  background-color: #2385AF;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+  align-items: center;
+}
+
+.logo-link:hover {
+  background-color: transparent;
+}
